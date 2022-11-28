@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lab_inflearn_2/layout/default_layout.dart';
+import 'package:lab_inflearn_2/screen/family_modifier_screen.dart';
 import 'package:lab_inflearn_2/screen/future_provider_screen.dart';
 import 'package:lab_inflearn_2/screen/state_notifier_provider_screen.dart';
 import 'package:lab_inflearn_2/screen/state_provider_screen.dart';
@@ -30,17 +31,24 @@ class HomeScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => FutureProviderScreen()));
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => FutureProviderScreen()));
               },
               child: Text('FutureProviderScreen'),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => StreamProviderScreen()));
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => StreamProviderScreen()));
               },
               child: Text('StreamProviderScreen'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => FamilyModifierScreen()));
+              },
+              child: Text('FamilyModifierScreen'),
             ),
           ],
         ));

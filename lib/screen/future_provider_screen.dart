@@ -24,7 +24,9 @@ class FutureProviderScreen extends ConsumerWidget {
                   );
                 },
                 error: (error, stack) => Text(error.toString()),
-                loading: () => Center(child: CircularProgressIndicator(),))
+                loading: () => Center(
+                      child: CircularProgressIndicator(),
+                    ))
           ],
         ));
   }
