@@ -3,6 +3,7 @@ import 'package:lab_inflearn_2/layout/default_layout.dart';
 import 'package:lab_inflearn_2/screen/future_provider_screen.dart';
 import 'package:lab_inflearn_2/screen/state_notifier_provider_screen.dart';
 import 'package:lab_inflearn_2/screen/state_provider_screen.dart';
+import 'package:lab_inflearn_2/screen/stream_provider_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -33,6 +34,13 @@ class HomeScreen extends StatelessWidget {
                     builder: (_) => FutureProviderScreen()));
               },
               child: Text('FutureProviderScreen'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => StreamProviderScreen()));
+              },
+              child: Text('StreamProviderScreen'),
             ),
           ],
         ));
